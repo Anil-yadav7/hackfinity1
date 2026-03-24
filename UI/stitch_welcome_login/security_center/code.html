@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SpendIQ Security &amp; Fraud Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#005bc0",
+                        "secondary-fixed": "#89fa9b",
+                        "on-tertiary-fixed": "#410001",
+                        "primary-container": "#1a73e8",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#86f898",
+                        "on-background": "#191c1d",
+                        "tertiary": "#b81d17",
+                        "on-secondary-container": "#00722f",
+                        "on-primary-container": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "error": "#ba1a1a",
+                        "primary": "#005bbf",
+                        "inverse-primary": "#adc7ff",
+                        "on-surface-variant": "#414754",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-bright": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed": "#001a41",
+                        "outline-variant": "#c1c6d6",
+                        "on-surface": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#006e2c",
+                        "secondary-fixed-dim": "#6ddd81",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#727785",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary-container": "#dc392c",
+                        "on-tertiary-fixed-variant": "#930004",
+                        "on-secondary-fixed-variant": "#005320",
+                        "on-secondary-fixed": "#002108",
+                        "surface": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#f8f9fa]/80 dark:bg-gray-950/80 backdrop-blur-xl docked full-width top-0 sticky flex justify-between items-center px-6 py-4 w-full z-50 shadow-none">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man in a bright office environment with soft natural lighting and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjaIK8FDyvu8x5ikoRTsHFjKSf6AkaLR4lM8O9tgZzaY0NnDUhZAvqQwiNNAeIihpeymufpjd6LPa3HQ5yGjkHPD8babuzUyBnaJUy2vekWwpY5mFXvXGATk0Kmywm3R6zwCVnQMNVrkHA9X3BuZh8x0euRic9n3ms3lzo65koGHFHumADYYweG2OVItSMtBtCdo4T47yAsIa6vJTg9jiRnzWcFMatvbKdb--kJbT9kqrx9kd8xYzy9QvqVjlnM7bzvpNkwFD6SGta"/>
+</div>
+<h1 class="font-['Manrope'] font-bold text-lg tracking-tight text-[#1a73e8] dark:text-blue-400">Security</h1>
+</div>
+<div class="text-xl font-extrabold tracking-tighter text-[#1a73e8] dark:text-blue-400">SpendIQ</div>
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+</button>
+</header>
+<main class="max-w-5xl mx-auto px-6 pt-4 pb-32">
+<!-- Fraud Ticker -->
+<div class="mb-8 overflow-hidden rounded-full bg-surface-container-low px-6 py-3 flex items-center gap-4 group">
+<span class="material-symbols-outlined text-primary shrink-0" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<div class="flex flex-1 overflow-hidden">
+<p class="whitespace-nowrap animate-marquee text-label-md font-medium text-on-surface-variant tracking-wide">
+                    Safety Tip: SpendIQ will never ask for your PIN via email. • Check your monthly reports for unrecognized subscriptions. • Enable 2FA for all linked accounts.
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Trust Meter & Checklist -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Trust Meter Card -->
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center text-center transition-all hover:scale-[1.01]">
+<span class="text-label-md font-bold text-on-surface-variant uppercase tracking-widest mb-6">Security Score</span>
+<!-- Circular Gauge -->
+<div class="relative w-56 h-56 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="112" cy="112" fill="transparent" r="100" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-secondary" cx="112" cy="112" fill="transparent" r="100" stroke="currentColor" stroke-dasharray="628" stroke-dashoffset="157" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline font-extrabold text-5xl text-on-surface">84</span>
+<span class="text-secondary font-bold text-lg">Good</span>
+</div>
+</div>
+<p class="mt-8 text-on-surface-variant text-sm leading-relaxed max-w-xs">
+                        Your account is currently well-protected. We've blocked <span class="text-secondary font-bold">12</span> suspicious requests this month.
+                    </p>
+</div>
+<!-- Secure Your Account Checklist -->
+<div class="bg-surface-container-low p-8 rounded-lg">
+<h3 class="font-headline font-bold text-xl mb-6">Secure Your Account</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Biometric Login Active</span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-medium">Recovery Phone Verified</span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl border border-tertiary-container/20">
+<span class="material-symbols-outlined text-tertiary-container">error_outline</span>
+<div class="flex-1">
+<span class="text-sm font-semibold text-on-surface">Set 2FA Recovery Keys</span>
+<p class="text-xs text-on-surface-variant">Recommended for high security</p>
+</div>
+<button class="bg-primary text-on-primary text-xs font-bold px-4 py-2 rounded-full">Fix</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Recent Alerts -->
+<div class="lg:col-span-7 space-y-6">
+<div class="flex justify-between items-end mb-2 px-2">
+<h2 class="font-headline font-extrabold text-3xl tracking-tight">Recent Alerts</h2>
+<button class="text-primary font-bold text-sm hover:underline">View History</button>
+</div>
+<!-- Alert Card 1: Critical -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex shadow-sm group border-l-4 border-tertiary-container">
+<div class="p-6 flex gap-5 w-full">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">phishing</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-on-surface">Phishing attempt detected</h4>
+<span class="text-xs font-medium text-tertiary-container bg-tertiary-container/10 px-2 py-1 rounded-md">Urgent</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                A localized phishing wave is targeting users in <span class="font-semibold">New York Area</span>. Ensure you only log in via our official mobile app.
+                            </p>
+<div class="pt-4 flex gap-3">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full text-xs font-bold transition-all active:scale-95">Verify Account</button>
+<button class="px-6 py-2 bg-surface-container-high text-on-surface rounded-full text-xs font-bold">Dismiss</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert Card 2: Warning -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex shadow-sm group border-l-4 border-amber-500">
+<div class="p-6 flex gap-5 w-full">
+<div class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-amber-700">shield_lock</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-on-surface">New login detected</h4>
+<span class="text-xs font-medium text-amber-700 bg-amber-100 px-2 py-1 rounded-md">Warning</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Logged in from <span class="font-semibold">MacBook Pro in Chicago, IL</span>. If this wasn't you, freeze your card immediately.
+                            </p>
+<div class="pt-2">
+<span class="text-[10px] text-slate-400 font-medium uppercase tracking-tighter">2 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert Card 3: Info -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex shadow-sm group border-l-4 border-primary">
+<div class="p-6 flex gap-5 w-full">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">update</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg text-on-surface">Security Policy Update</h4>
+<span class="text-xs font-medium text-primary bg-primary-container/10 px-2 py-1 rounded-md">Info</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                We've enhanced our encryption protocols for cross-border transactions. No action is required.
+                            </p>
+<div class="pt-2">
+<span class="text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Yesterday</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Graphic Bento -->
+<div class="mt-12 rounded-lg overflow-hidden relative h-64 bg-primary group cursor-pointer shadow-lg shadow-primary/20">
+<img alt="Cyber Security" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Futuristic digital abstract of glowing blue interconnected lines and floating security padlocks representing high-tech data encryption" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB128JW7DraIlZGbfZk8Vf0bCmfbsmwugwcztqGwwdP4udQnd4hT5dXMoZIC93EAsB0dTRnqs9-yFA3idroiwUMAJnZa6lb1-eatio_-foSAz5ymQIUGaMlapRIvREqY5Fc2L1GSdMTbKJgRoFwUMmbtfI2FG0-4xjsznAlG9yeQ7Hc63S6-n_IAMBM2a_NOl0jBo-On7rIup2PcVkoR4_nNyLnOZubxZKR_JOm71jzFtYQOiTBEB_HCEbwM-2WxfSozXFW3wsMlL6N"/>
+<div class="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-primary/90 to-transparent">
+<h3 class="font-headline font-extrabold text-2xl text-on-primary leading-tight">Join the SpendIQ<br/>Safety Collective</h3>
+<p class="text-on-primary/80 text-sm mt-2">Help us track fraudulent merchants in real-time.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f8f9fa]/80 dark:bg-gray-950/80 backdrop-blur-xl shadow-[0_-12px_32px_rgba(25,28,29,0.06)] rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full transition-all duration-300 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full transition-all duration-300 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1a73e8] text-white rounded-full px-6 py-1.5 transition-all duration-300 tap-highlight-transparent scale-105" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Security</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full transition-all duration-300 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Reports</span>
+</a>
+</nav>
+<!-- Fraud Alert FAB -->
+<button class="fixed right-6 bottom-28 bg-tertiary-container text-on-tertiary-container p-4 rounded-full shadow-[0_12px_32px_rgba(25,28,29,0.15)] z-40 transition-transform active:scale-90 flex items-center gap-2 pr-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<span class="font-bold text-sm">Lock Cards</span>
+</button>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</body></html>

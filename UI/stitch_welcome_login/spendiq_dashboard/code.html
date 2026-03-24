@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SpendIQ - Intelligent Ledger</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#727785",
+              "primary-fixed-dim": "#adc7ff",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#d8e2ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "background": "#f8f9fa",
+              "outline-variant": "#c1c6d6",
+              "secondary-fixed": "#89fa9b",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#ffb4a9",
+              "on-primary-fixed-variant": "#004493",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#ffffff",
+              "tertiary-fixed": "#ffdad5",
+              "inverse-surface": "#2e3132",
+              "inverse-primary": "#adc7ff",
+              "on-tertiary-fixed": "#410001",
+              "surface-container-highest": "#e1e3e4",
+              "primary-container": "#1a73e8",
+              "surface-tint": "#005bc0",
+              "on-tertiary-fixed-variant": "#930004",
+              "on-secondary-container": "#00722f",
+              "secondary-fixed-dim": "#6ddd81",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "secondary-container": "#86f898",
+              "tertiary": "#b81d17",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#005320",
+              "on-background": "#191c1d",
+              "primary": "#005bbf",
+              "on-surface": "#191c1d",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f3f4f5",
+              "surface-container": "#edeeef",
+              "tertiary-container": "#dc392c",
+              "on-error": "#ffffff",
+              "surface": "#f8f9fa",
+              "on-surface-variant": "#414754",
+              "on-tertiary-container": "#ffffff",
+              "on-primary-fixed": "#001a41",
+              "secondary": "#006e2c",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#002108",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-container-high": "#e7e8e9"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+        color: #191c1d;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/10">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a professional man with a friendly smile, clean studio lighting, soft blurred neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyVRIkfH7q6Rh0xGQoh-RrXZAmNDsGgbagIyl451mwMkbzzaKftrMD9yxog1EN8RLApk2GaS2BrK1aCo8W-Hiw9cA9KqFpUQvdNtlW7oFkcR_FvVrw1_1Z-fMzc00xCZWACBL8AIGvk69ipr8fBN8fBR1X9IT_ZeU1TfpV5vmzK9nXL3mCHzDhcSuPacsOgCFparx-h7fH8iEPCbR1yD3zFeqUq5-KYDI8Ft36cKHQwm3t1waeCAjj5RRVaTLtj8TwyJxS7Zl26dXb"/>
+</div>
+</div>
+<span class="text-2xl font-extrabold text-[#1a73e8] font-headline tracking-tight">SpendIQ</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-black/5 transition-colors active:scale-90">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-7xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-10 ml-2 md:ml-8">
+<p class="text-on-surface-variant text-sm font-medium uppercase tracking-widest mb-2">Portfolio Overview</p>
+<h1 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface">Good morning, <span class="text-primary">Alex</span>.</h1>
+<p class="text-on-surface-variant mt-2 max-w-md">Your financial health score improved by 4% this week. Keep maintaining your savings goal.</p>
+</section>
+<!-- Fraud Awareness Ticker -->
+<div class="mb-8 overflow-hidden rounded-lg bg-tertiary-container/10 border-l-4 border-tertiary-container p-4 flex items-center gap-4">
+<div class="flex-shrink-0 w-10 h-10 bg-tertiary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="shield_alert" data-weight="fill">shield</span>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-bold text-on-surface">Security Alert:</p>
+<div class="whitespace-nowrap animate-marquee italic text-on-surface-variant text-sm">
+                    Increased phishing activity reported targeting bank logins. SpendIQ will never ask for your PIN via SMS.
+                </div>
+</div>
+</div>
+<!-- Summary Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_12px_32px_rgba(25,28,29,0.06)] flex flex-col gap-1">
+<span class="text-on-surface-variant text-xs font-semibold uppercase">Total Income</span>
+<span class="text-2xl font-bold font-headline">$8,450</span>
+<span class="text-secondary text-xs flex items-center font-medium mt-1">
+<span class="material-symbols-outlined text-[14px] mr-1" data-icon="trending_up">trending_up</span> +12%
+                </span>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_12px_32px_rgba(25,28,29,0.06)] flex flex-col gap-1">
+<span class="text-on-surface-variant text-xs font-semibold uppercase">Total Expenses</span>
+<span class="text-2xl font-bold font-headline text-tertiary">$3,210</span>
+<span class="text-tertiary text-xs flex items-center font-medium mt-1">
+<span class="material-symbols-outlined text-[14px] mr-1" data-icon="trending_up">trending_up</span> +2%
+                </span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_12px_32px_rgba(25,28,29,0.06)] flex flex-col gap-1">
+<span class="text-on-surface-variant text-xs font-semibold uppercase">Net Savings</span>
+<span class="text-2xl font-bold font-headline text-primary">$5,240</span>
+<span class="text-secondary text-xs flex items-center font-medium mt-1">
+                    On track
+                </span>
+</div>
+<!-- Card 4 -->
+<div class="bg-tertiary-container p-6 rounded-lg shadow-[0_12px_32px_rgba(25,28,29,0.06)] flex flex-col gap-1 text-white">
+<span class="text-white/80 text-xs font-semibold uppercase">Active Alerts</span>
+<span class="text-2xl font-bold font-headline">0</span>
+<span class="text-white/90 text-xs flex items-center font-medium mt-1">
+                    All secure
+                </span>
+</div>
+</div>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Category Split (Donut Chart Concept) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-between min-h-[400px]">
+<div class="w-full text-left mb-6">
+<h3 class="text-xl font-bold font-headline mb-1">Category Split</h3>
+<p class="text-on-surface-variant text-sm">Where your money goes</p>
+</div>
+<!-- Mock Donut Chart -->
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#e1e3e4" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#1a73e8" stroke-dasharray="70 100" stroke-linecap="round" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#006e2c" stroke-dasharray="25 100" stroke-dashoffset="-70" stroke-linecap="round" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#dc392c" stroke-dasharray="5 100" stroke-dashoffset="-95" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-2xl font-bold font-headline">$3.2k</span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Total Spent</span>
+</div>
+</div>
+<div class="w-full mt-8 space-y-3">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-primary"></div><span class="text-on-surface-variant">Food &amp; Dining</span></div>
+<span class="font-bold">70%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-secondary"></div><span class="text-on-surface-variant">Transport</span></div>
+<span class="font-bold">25%</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-tertiary"></div><span class="text-on-surface-variant">Entertainment</span></div>
+<span class="font-bold">5%</span>
+</div>
+</div>
+</div>
+<!-- Spending Trend & Insights -->
+<div class="md:col-span-8 flex flex-col gap-6">
+<!-- Line Chart Concept -->
+<div class="bg-surface-container-low p-8 rounded-lg flex-1 min-h-[250px] relative overflow-hidden">
+<div class="flex justify-between items-start mb-8 relative z-10">
+<div>
+<h3 class="text-xl font-bold font-headline mb-1">Weekly Trend</h3>
+<p class="text-on-surface-variant text-sm">Daily spending frequency</p>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-full text-xs font-bold border border-outline-variant/20">
+                            Aug 14 - Aug 20
+                        </div>
+</div>
+<!-- Mock Line Chart Path -->
+<div class="absolute bottom-0 left-0 w-full h-1/2 px-8">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#1a73e8" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#1a73e8" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 Q15,40 30,60 T60,20 T100,50 L100,100 L0,100 Z" fill="url(#chartGradient)"></path>
+<path d="M0,80 Q15,40 30,60 T60,20 T100,50" fill="none" stroke="#1a73e8" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="60" cy="20" fill="#1a73e8" r="3"></circle>
+</svg>
+</div>
+<div class="flex justify-between mt-auto pt-24 text-[10px] text-on-surface-variant font-bold uppercase tracking-widest relative z-10">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+<!-- AI Insight Panel -->
+<div class="bg-primary-container p-6 rounded-lg text-white flex items-center gap-6 relative overflow-hidden">
+<div class="flex-1 relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="lightbulb">lightbulb</span>
+<span class="text-xs font-bold uppercase tracking-widest opacity-80">AI Insight</span>
+</div>
+<p class="text-lg font-medium leading-tight">You spend 15% more on <span class="font-extrabold underline decoration-secondary-container underline-offset-4">Food Delivery</span> during weekends. Opting for a meal kit could save you $120/mo.</p>
+</div>
+<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Background texture -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+</div>
+</div>
+<!-- Recent Transactions Feed -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-lg p-8">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-2xl font-bold font-headline mb-1">Recent Transactions</h3>
+<p class="text-on-surface-variant text-sm">Real-time ledger of your spends</p>
+</div>
+<button class="text-primary text-sm font-bold hover:underline">View All History</button>
+</div>
+<div class="space-y-6">
+<!-- Transaction 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Artisan Bakery &amp; Co</p>
+<p class="text-xs text-on-surface-variant">Today • 09:12 AM</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="font-bold text-lg">-$14.50</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase rounded-full tracking-wider">Groceries</span>
+</div>
+</div>
+<!-- Transaction 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="directions_car">directions_car</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Uber Trip</p>
+<p class="text-xs text-on-surface-variant">Yesterday • 11:45 PM</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="font-bold text-lg">-$32.00</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase rounded-full tracking-wider">Impulse</span>
+</div>
+</div>
+<!-- Transaction 3 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="local_bar">local_bar</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">The Social Club</p>
+<p class="text-xs text-on-surface-variant">Yesterday • 08:20 PM</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="font-bold text-lg">-$86.20</span>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full tracking-wider">Social Obligation</span>
+</div>
+</div>
+<!-- Transaction 4 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Apple Store Online</p>
+<p class="text-xs text-on-surface-variant">Aug 18 • 02:30 PM</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="font-bold text-lg">-$1,299.00</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase rounded-full tracking-wider">Electronics</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-28 right-6 w-16 h-16 bg-primary rounded-full shadow-lg text-white flex items-center justify-center active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 rounded-t-[2rem] bg-[#f8f9fa]/80 backdrop-blur-xl border-t border-[#c1c6d6]/20 shadow-[0_-12px_32px_rgba(25,28,29,0.06)]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center bg-[#1a73e8] text-white rounded-full px-5 py-1.5" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-1.5 hover:text-[#1a73e8] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] text-[11px] font-medium">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-1.5 hover:text-[#1a73e8] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-[11px] font-medium">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-1.5 hover:text-[#1a73e8] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-['Inter'] text-[11px] font-medium">Security</span>
+</a>
+</div>
+</nav>
+<!-- Custom Style for Marquee -->
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</body></html>

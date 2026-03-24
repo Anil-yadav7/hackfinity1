@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Node/React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Expo
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Server
+server/node_modules/
+.env
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/iOS/Pods/

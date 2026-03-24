@@ -1,0 +1,4 @@
+[dotenv@17.3.1] injecting env (4) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Failed to connect to primary MongoDB. Starting in-memory MongoDB...
+Connected to In-Memory MongoDB
+Server running on port 5001

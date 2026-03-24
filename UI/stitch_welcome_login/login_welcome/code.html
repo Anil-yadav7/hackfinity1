@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SpendIQ - Secure Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-primary": "#ffffff",
+              "surface-tint": "#005bc0",
+              "secondary-fixed": "#89fa9b",
+              "on-tertiary-fixed": "#410001",
+              "primary-container": "#1a73e8",
+              "surface-container": "#edeeef",
+              "secondary-container": "#86f898",
+              "on-background": "#191c1d",
+              "tertiary": "#b81d17",
+              "on-secondary-container": "#00722f",
+              "on-primary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed": "#d8e2ff",
+              "error": "#ba1a1a",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-surface-variant": "#414754",
+              "surface-container-high": "#e7e8e9",
+              "surface-bright": "#f8f9fa",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2e3132",
+              "on-primary-fixed": "#001a41",
+              "outline-variant": "#c1c6d6",
+              "on-surface": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006e2c",
+              "secondary-fixed-dim": "#6ddd81",
+              "primary-fixed-dim": "#adc7ff",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d9dadb",
+              "outline": "#727785",
+              "surface-variant": "#e1e3e4",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdad5",
+              "tertiary-container": "#dc392c",
+              "on-tertiary-fixed-variant": "#930004",
+              "on-secondary-fixed-variant": "#005320",
+              "on-secondary-fixed": "#002108",
+              "surface": "#f8f9fa",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed-dim": "#ffb4a9",
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-container": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 32px rgba(25, 28, 29, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed-dim">
+<main class="min-h-screen flex flex-col md:flex-row">
+<div class="hidden md:flex md:w-1/2 lg:w-3/5 bg-surface-container-low items-center justify-center p-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-[-10%] left-[-10%] w-80 h-80 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-secondary-fixed-dim rounded-full blur-[150px]"></div>
+</div>
+<div class="relative z-10 max-w-xl">
+<div class="mb-8">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label text-xs font-semibold tracking-wider mb-6">CRYSTAL ENGINE V2</span>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                        The future of <br/>
+<span class="text-primary italic">intelligent</span> wealth.
+                    </h1>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-12">
+<div class="bg-surface-container-lowest p-6 rounded-lg editorial-shadow">
+<span class="material-symbols-outlined text-primary mb-3">query_stats</span>
+<p class="font-headline font-bold text-lg">99.2% Accuracy</p>
+<p class="text-on-surface-variant text-sm mt-1">Real-time fraud detection &amp; spend classification.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg editorial-shadow">
+<span class="material-symbols-outlined text-secondary mb-3">verified_user</span>
+<p class="font-headline font-bold text-lg">Bank-Grade</p>
+<p class="text-on-surface-variant text-sm mt-1">Encrypted with industry leading protocols.</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-12 right-12 flex justify-between items-center">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="portrait of a young professional smiling confidently in a modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0IfsHbGw-TSxN4hCl5Y7vG9sx6gnR9ml77NrdG_XsJSSCaSpHTFlKn1wsIqIk5we-tH0WZiA0VODc7BOdWpXuFBdfayOa6l26oGDq7A9CaD99FiaNK6Yvh5kMrJdlSXtt-cj-89SV1FKDkDjKB7NCPTWDWN-Rb2txXiNliwYupG-PAX9X_BZHymHSD94pxGI4F12MmheteY_4csfUmQoVfMDtEmnht7FN2Eu2TjKmf2nAyLHLo8s_PcDj49jrRCjlNob99efWdZS2"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="closeup of a middle-aged man with glasses looking into the camera with a neutral expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqwGFvPDQSUI_9SqXQdB_JlTIw-eLHP9uposy4Y7S6fuOlEXdXJHkjSP7gzBn-Hb5ZM6hKQ77IBZ7J23OWNhdrFANyKn8viZv07m5WmeuGSsTc4KAyshwSmdPYp5V1A4psTFyq2Y7NxJs2ZLEm6bib-EU0cIPSTAO0Bds_HzWlBkroIzsxVFfq-BuoAcdnwlhzalbgZ19U-HF92un4uD4eeciNnfLUg5wCMVPSuSwM2hrBZeChVN3ZUDgqEFlIKZ_MAXgroH23s_CD"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="vibrant portrait of a woman with a bright background and natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVe4nPLDVDb3byD4_EOkiLh5jSCistGZZx_ClEh2Zi_yuH-U-hGk5yNBFZyBYozYPPMplHyAVuDH24X6h7vN_c897Qeurzs45Y24DpPQPWO4qLA2K6-DRVLDvPoCLV1x3JCBwkJMkAB_wTx6_mLGERwwQIhHkjp9SJDeEw4IfAmgtSR4YMOHarXaR6AQmqvIZ_uEHozycJBi6B3_AJ8jxkBOR9TLMorfYyfV_HgmbPYzbEIpGyleI7-oX9DucFX06qzZcff6DK86lO"/>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+12k</div>
+</div>
+<p class="text-xs font-medium text-on-surface-variant">Trusted by financial experts worldwide</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-6 py-12 md:px-12 lg:px-24 bg-surface">
+<div class="w-full max-w-sm">
+<div class="mb-12 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2 mb-8">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center rotate-3">
+<span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<span class="font-headline font-extrabold text-2xl tracking-tighter text-primary">SpendIQ</span>
+</div>
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-2">Welcome back</h2>
+<p class="text-on-surface-variant text-sm">Secure your financial future</p>
+</div>
+<form class="space-y-5">
+<div class="group">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-widest mb-2 ml-1" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline/60 text-on-surface" id="email" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-center mb-2 ml-1">
+<label class="block text-xs font-semibold text-on-surface-variant uppercase tracking-widest" for="password">Password</label>
+<a class="text-xs font-bold text-primary hover:text-primary-container transition-colors" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full pl-12 pr-12 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 placeholder:text-outline/60 text-on-surface" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-4 bg-primary text-white font-headline font-bold rounded-full shadow-lg shadow-primary/20 hover:bg-primary-container active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+                            Login
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-10 mb-8 relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-surface-container-high"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest">
+<span class="bg-surface px-4 text-outline font-bold">Or continue with</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 px-4 py-3.5 border-none bg-surface-container-high hover:bg-surface-container-highest rounded-full transition-colors active:scale-[0.98]">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 1.2-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="font-label font-bold text-sm">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-4 py-3.5 border-none bg-surface-container-high hover:bg-surface-container-highest rounded-full transition-colors active:scale-[0.98]">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.05 20.28c-.96.95-2.44 2.1-4.05 2.1-1.6 0-2.1-.96-4.05-.96-1.94 0-2.5.96-4.04.96-1.6 0-3.1-1.15-4.05-2.1-2.43-2.43-2.43-6.38 0-8.81.95-.95 2.44-2.1 4.05-2.1 1.6 0 2.1.96 4.04.96 1.95 0 2.45-.96 4.05-.96 1.6 0 3.1 1.15 4.05 2.1 2.43 2.43 2.43 6.38 0 8.81zM13 1c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"></path>
+</svg>
+<span class="font-label font-bold text-sm">Apple</span>
+</button>
+</div>
+<div class="mt-12 text-center">
+<p class="text-sm text-on-surface-variant font-medium">
+                        New to SpendIQ? 
+                        <a class="text-primary font-bold ml-1 hover:underline underline-offset-4 decoration-2" href="#">Sign up</a>
+</p>
+</div>
+<div class="mt-16 flex justify-center gap-6">
+<a class="text-[10px] font-bold text-outline hover:text-on-surface transition-colors tracking-tighter uppercase" href="#">Privacy Policy</a>
+<a class="text-[10px] font-bold text-outline hover:text-on-surface transition-colors tracking-tighter uppercase" href="#">Terms of Service</a>
+<a class="text-[10px] font-bold text-outline hover:text-on-surface transition-colors tracking-tighter uppercase" href="#">Support</a>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 right-6 z-50">
+<button class="w-12 h-12 bg-surface-container-lowest editorial-shadow rounded-full flex items-center justify-center text-primary hover:text-primary-container transition-transform hover:scale-110 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">help</span>
+</button>
+</div>
+</body></html>
